@@ -1,0 +1,119 @@
+/* topbar.css */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu li {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .menu li:hover {
+    color: #ffd700; /* Change text color on hover */
+  }
+  
+  .menu li:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ffd700; /* Underline color */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+  
+  .menu li:hover:after {
+    width: 100%;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .menu li:hover .submenu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .submenu li {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submenu li:hover {
+    background-color: #444;
+  }
+  
+  .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .burger:hover .bar {
+    background-color: #ffd700; /* Change color on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      border-radius: 10px;
+    }
+  
+    .menu.open {
+      display: flex;
+    }
+  
+    .menu li:after {
+      display: none;
+    }
+  
+    .burger {
+      display: flex;
+    }
+  }
+  
