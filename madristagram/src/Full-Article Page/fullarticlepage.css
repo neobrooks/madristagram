@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+.full-article-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+  border: 1px solid #ddd; /* Thin border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.post-meta span {
+  margin-right: 20px;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.6;
+}

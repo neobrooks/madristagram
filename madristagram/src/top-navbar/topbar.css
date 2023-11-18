@@ -1,18 +1,54 @@
 /* topbar.css */
 
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 10px;
+body {
+    margin: 0;
+    padding: 0;
   }
   
-  .logo {
-    font-size: 1.5rem;
+  .top {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #f5f5f5; /* Light-toned background */
+    color: #193a66; /* Text color */
+    height: auto; /* Adjusted height to fit content */
+    border-top: 10px solid #F79423; /* Added border at the top */
+    border-bottom: 10px solid #F79423 ; /* Added border at the bottom */
+  }
+  
+  
+  
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo-img {
+    width: 250px; /* Adjust the size of your logo */
+    height: auto;
+    margin-bottom: 5px;
+    margin-top: -70px;
+  }
+  
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text horizontally */
+  }
+  
+  .logo-text h1 {
+    font-size: 100px; /* Adjust the font size */
     font-weight: bold;
+    margin-top: -100px;
+  }
+  
+  .logo-text p {
+    font-size: 35px;
+    margin-bottom: 20px; /* Remove default margin for p */
+    margin-top: -60px;
   }
   
   .menu {
@@ -20,16 +56,25 @@
     display: flex;
     margin: 0;
     padding: 0;
+    align-items: center; /* Center items horizontally */
   }
   
   .menu li {
+    font-size: 20px;
     position: relative;
-    margin-right: 20px;
+    margin-right: 30px;
     cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 15px; /* Make the border rounded */
+    padding: 10px 15px; /* Add padding between text and border */
+    transition: background 0.3s ease; /* Add transition for smooth effect */
+    background: linear-gradient(rgba(25, 58, 102, 0.1), rgba(25, 58, 102, 0.05)); /* Add gradient when not hovered */
   }
   
   .menu li:hover {
-    color: #ffd700; /* Change text color on hover */
+    color: #193a66;
+    border-color: #193a66;
+    background: linear-gradient(rgba(25, 58, 102, 0.2), rgba(25, 58, 102, 0.1)); /* Add gradient on hover */
   }
   
   .menu li:after {
@@ -37,7 +82,7 @@
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: #ffd700; /* Underline color */
+    background-color: #193a66;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -53,7 +98,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #333;
+    background-color: #f5f5f5; /* Light-toned submenu background */
     border-radius: 0 0 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -66,12 +111,12 @@
   
   .submenu li {
     padding: 10px;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #ccc; /* Light-toned border */
     transition: background-color 0.3s ease;
   }
   
   .submenu li:hover {
-    background-color: #444;
+    background-color: #ddd; /* Light-toned background on hover */
   }
   
   .burger {
@@ -83,13 +128,25 @@
   .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: #193a66;
     margin: 5px 0;
     transition: background-color 0.3s ease;
   }
   
   .burger:hover .bar {
-    background-color: #ffd700; /* Change color on hover */
+    background-color: #193a66;
+  }
+  
+  .search-bar {
+    align-self: flex-end;
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
   }
   
   @media (max-width: 768px) {
@@ -100,7 +157,7 @@
       top: 60px;
       left: 0;
       width: 100%;
-      background-color: #333;
+      background-color: #f5f5f5; /* Light-toned background */
       border-radius: 10px;
     }
   

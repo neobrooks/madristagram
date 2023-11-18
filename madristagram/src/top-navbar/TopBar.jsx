@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './topbar.css';
+import MadristagramLogo from './madristagram-logo.png';
 
 export default function TopBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,7 +11,13 @@ export default function TopBar() {
 
   return (
     <div className={`top ${menuOpen ? 'open' : ''}`}>
-      <div className="logo">Your Logo</div>
+      <div className="logo-container">
+        <img src={MadristagramLogo} alt="Madristagram Logo" className="logo-img" />
+        <div className="logo-text">
+          <h1>Madristagram</h1>
+          <p>A Real Madrid Community</p>
+        </div>
+      </div>
       <ul className={`menu ${menuOpen ? 'open' : ''}`}>
         <li>Home</li>
         <li>
